@@ -11,28 +11,31 @@ namespace vsite::oop::v5
 	class tire {
 		double width;
 	public: 
-		tire(double const& width) :width(width){}
-		double	diameter() {
-	}
+		tire(double  width) :width(width){} 
+		double	diameter();
 	};
-
+	
 	class vehicle {
 		int year_of_production;
 	public: 
 		
-		vehicle(int const& y) : year_of_production(y){}
-				int year() {
-		}
+		vehicle(int  year_of_production) { this->year_of_production = year_of_production; } 
+		~vehicle(){};
+		int year();
 	};
 
 	class product {
 		double product_price;
 	public:
-		product(double const& price):product_price(price){}
-		double price(){}
+		product(double price):product_price(price){}
+		double price();
 	};
 
-	class car:public product,public vehicle,public tire {
-
+	class car:public vehicle {
+		tire t;
+		double price;
+	public:
+		car(int year_of_production , tire t , double price) {}
+		
 	};
 }

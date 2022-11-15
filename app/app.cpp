@@ -7,11 +7,14 @@ namespace vsite::oop::v5
 		return 2.54 * n;
 	}
 	double operator "" _eur(unsigned long long n) {
-		return 7.543 * n;
+		return 7.5345 * n;
 	}
 
-	double diameter() {};
-	int year() {};
-	double price{};
+	
+	int vehicle::year() { return this->year_of_production; };
+
+	double tire::diameter() { return this->width; }
+	 
+	double product::price() { return this->product_price; }
 	
 }
