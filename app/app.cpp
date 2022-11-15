@@ -16,5 +16,7 @@ namespace vsite::oop::v5
 	double tire::diameter() { return this->width; }
 	 
 	double product::price() { return this->product_price; }
+
+	double car::tire_diameter() { return this->t.diameter(); }
 	
 }

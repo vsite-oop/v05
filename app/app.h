@@ -31,11 +31,10 @@ namespace vsite::oop::v5
 		double price();
 	};
 
-	class car:public vehicle {
+	class car:public vehicle,public product{
 		tire t;
-		double price;
 	public:
-		car(int year_of_production , tire t , double price) {}
-		
+		car(int year_of_production, double price, double diameter) : vehicle{ year_of_production }, product{ price}, t{ diameter }{}
+		double tire_diameter();
 	};
 }
