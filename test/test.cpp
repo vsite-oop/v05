@@ -37,13 +37,13 @@ namespace all_tests
 			Assert::AreEqual(753.45, m);
 			Assert::IsTrue(std::is_same_v<double, decltype(m)>);
 		}
-
+		
 		TEST_METHOD(product_class)
 		{
 			product p(1500_eur);
 			Assert::AreEqual(11'301.75, p.price());
 		}
-
+		
 		TEST_METHOD(car_one)
 		{
 			car peugot(2022, 100'000_eur, 17_inch);
@@ -59,7 +59,7 @@ namespace all_tests
 			Assert::AreEqual(150'690., honda.price());
 			Assert::AreEqual(40.64, honda.tire_diameter());
 		}
-
+		
 		TEST_METHOD(car_hierarchy)
 		{
 			Assert::IsFalse(std::is_default_constructible_v<tire>);
