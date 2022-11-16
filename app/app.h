@@ -11,7 +11,7 @@ namespace vsite::oop::v5
     class tire{
         double t;
         public:
-         tire(double d);
+         tire(double d) : t{d} {}
          double diameter()const;
 
         
@@ -19,14 +19,14 @@ namespace vsite::oop::v5
     class vehicle{
         unsigned int y;
         public:
-         vehicle(unsigned int a);
+         vehicle(unsigned int a) : y{a} {}
          unsigned int year()const;
 
     };
     class product{
         double p;
         public:
-         product(double pr);
+         product(double pr) : p{pr} {}
          double price()const;
 
     };
@@ -34,7 +34,7 @@ namespace vsite::oop::v5
     class car:public vehicle,public product{
         double td;
         public:
-         car(unsigned int a,double pr,double tdi);
+         car(unsigned int a,double pr,double tdi):vehicle{a},product{pr},td{tdi}{}
          double tire_diameter()const;
 
     };

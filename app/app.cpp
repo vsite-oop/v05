@@ -12,21 +12,21 @@ namespace vsite::oop::v5
     {
         return n * 2.54;
     }
-    vehicle::vehicle(unsigned int a) : y{a} {}
+    
 
     unsigned int vehicle::year() const
     {
         return y;
     }
 
-    tire::tire(double d) : t{d} {}
+    
 
     double tire::diameter() const
     {
         return t;
     }
 
-    product::product(double pr) : p{pr} {}
+    
 
     double product::price() const
     {
