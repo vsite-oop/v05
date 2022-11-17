@@ -12,32 +12,32 @@ namespace vsite::oop::v5
     {
         return n * 2.54;
     }
-    
+    vehicle::vehicle(int a) : y{a} {}
 
-    unsigned int vehicle::year() const
+    int vehicle::year() const
     {
         return y;
     }
 
-    
+    tire::tire(double d) : t{d} {}
 
     double tire::diameter() const
     {
         return t;
     }
 
-    
+    product::product(double pr) : p{pr} {}
 
     double product::price() const
     {
         return p;
     }
     
-    car::car(unsigned int a,double pr,double tdi):vehicle(a),product(pr),td{tdi}{}
-
+    car::car(int a,double pr,double tdi):vehicle(a),product(pr),td(tdi){}
+    
     double car::tire_diameter()const{
-        return td;
-    }     
+		return td;
+	}        
          
 
 
