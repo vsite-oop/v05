@@ -21,13 +21,13 @@ namespace all_tests
 
 		TEST_METHOD(tire_class)
 		{
-			tire left_front(20_inch);
+			tire left_front(20_inch); //konstruktor koji prima operator
 			Assert::AreEqual(50.8, left_front.diameter());
 		}
 
 		TEST_METHOD(vehicle_class)
 		{
-			vehicle v(2020);
+			vehicle v(2020); // konstruktor koji primagodinu
 			Assert::AreEqual(2020, v.year());
 		}
 
@@ -40,7 +40,7 @@ namespace all_tests
 
 		TEST_METHOD(product_class)
 		{
-			product p(1500_eur);
+			product p(1500_eur); //konstruktor produkta koji prima euro
 			Assert::AreEqual(11'301.75, p.price());
 		}
 
