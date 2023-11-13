@@ -25,6 +25,6 @@ namespace vsite::oop::v5
 	}
 	double car::tire_diameter()
 	{
-		return t.diameter() ;
+		return t.diameter();
 	}
 }
